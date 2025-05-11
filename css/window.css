@@ -1,0 +1,37 @@
+.targeta {
+    font-family: 'UbuntuMono';
+    position: absolute;
+    color: #F9F6EF;
+    top: 20%;
+    left: 75%;
+    transform: scale(1.2);
+    z-index: 1000;  
+  }
+  
+  #abrirVentana {
+    padding: 8px 12px;
+    background-color: #008cff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  
+  #cerrarVentana {
+    position: absolute;
+    top: 0.1px;
+    right: 0.1px;
+    background-color: #282828;      
+    border: none;
+    color: white;             
+    font-size: 1em;
+    padding: 0.2em 0.6em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in; 
+  }
+  
+  #cerrarVentana:hover {
+    background-color: rgb(182, 12, 12);
+  }
+  

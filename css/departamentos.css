@@ -1,0 +1,98 @@
+body{
+    background-color: #F9F6EF;
+    font-family: alpha;
+    color: #282828;
+}
+@font-face {
+    font-family: neovibes;
+    src: url('../fonts/neovibes.otf');
+}
+@font-face {
+    font-family: alpha;
+    src: url('../fonts/alphacorsa.personal-use.ttf');
+}
+@font-face {
+    font-family: UbuntuMono;
+    src: url('../fonts/UbuntuMono-Regular.ttf');
+}
+@font-face {
+    font-family: UbuntuMonoB;
+    src: url('../fonts/UbuntuMono-Bold.ttf');
+}
+.pata
+{
+    
+    font-family: neovibes;
+    margin-top: 7%;
+    text-align: center;
+    height: 40px;
+   width: 100% auto;
+   font-size: 20px;
+   
+   
+}
+.desc
+{
+    text-align: center;
+    font-size: 20px ;
+    font-family: UbuntuMono;
+
+}
+.titulod
+{
+    text-align: center;
+    font-family: UbuntUMonoB;
+}
+.tituloI
+{
+    text-align: center;
+    font-family: alpha;
+}
+.caruselkiki
+{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.carta
+{
+    margin: 0 auto;
+    width: auto;
+    font-family: UbuntuMono;
+    font-size: large;
+    text-align: center;
+    
+}
+input:invalid
+{
+    background-color: #EDA398;
+}
+@media only screen and (min-width: 300px)
+{
+    iframe{
+        width: 220px;
+        height: 150px;
+    }
+}
+@media only screen and (min-width: 400px)
+{
+    iframe{
+        width: 220px;
+        height: 150px;
+    }
+}
+@media only screen and (min-width: 800px)
+{
+    iframe{
+        width: 400px;
+        height: 315px;
+    }
+}
+@media only screen and (min-width: 1000px)
+{
+    iframe{
+        width: 560px;
+        height: 315px;
+    }
+}
+

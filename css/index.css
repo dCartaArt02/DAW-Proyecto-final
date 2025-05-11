@@ -1,0 +1,171 @@
+body{
+    background-color: #F9F6EF;
+    font-family: alpha;
+    color: #282828;
+}
+
+.mapa
+{
+    margin-left: 20%;
+    margin-top: 10%;
+   transform: scale(1.4);
+}
+.mapa path
+{
+    fill: #193497;
+    stroke-width: 1.3px;
+    stroke: #EDA398;
+}
+.mapa path:hover
+{
+    fill: #EDA398;
+}
+.pata
+{
+    
+    font-family: neovibes;
+    margin-top: 7%;
+    text-align: center;
+    height: 40px;
+   width: 100% auto;
+   font-size: 20px;
+   
+   
+}
+@font-face {
+    font-family: "neovibes";
+    src: url('../fonts/neovibes.otf');
+}
+@font-face {
+    font-family: alpha;
+    src: url('../fonts/alphacorsa.personal-use.ttf');
+}
+@font-face {
+    font-family: UbuntuMono;
+    src: url('../fonts/UbuntuMono-Regular.ttf');
+}
+@font-face {
+    font-family: UbuntuMonoB;
+    src: url('../fonts/UbuntuMono-Bold.ttf');
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.desc
+{
+    text-align: center;
+    font-size: 20px ;
+    font-family: UbuntuMono;
+
+}
+
+.dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -0.125rem;
+  }
+  
+  .dropdown-submenu > a::after {
+    float: right;
+  }
+  @media only screen and (min-width: 300px){
+    .mapa
+{
+    position: relative;
+    box-sizing: border-box;
+    right: 41%;
+    margin-top: 10%;
+   transform: scale(0.4);
+   
+}
+#abrirVentana {
+
+    display: none;
+  }
+  
+  #cerrarVentana {
+   
+    display: none;
+  }
+  .targeta {
+   display: none; 
+  }
+  }
+  @media only screen and (min-width: 400px)
+  {
+    .mapa
+    {
+        position: relative;
+        box-sizing: border-box;
+        right: 40%;
+        margin-top: 10%;
+       transform: scale(0.5);
+       
+    }
+    #abrirVentana {
+    
+        display: none;
+      }
+      
+      #cerrarVentana {
+       
+        display: none;
+      }
+      .targeta {
+       display: none; 
+      }
+  }
+  @media only screen and (min-width: 800px)
+  {
+    .mapa
+{
+    position: relative;
+    box-sizing: border-box;
+    right: 20%;
+    margin-top: 10%;
+   transform: scale(1.0);
+   
+}
+#abrirVentana {
+
+    display: none;
+  }
+  
+  #cerrarVentana {
+   
+    display: none;
+  }
+  .targeta {
+    display: none;
+  }
+  }
+  @media only screen and (min-width: 1000px)
+  {
+    .mapa
+{
+    box-sizing: border-box;
+    position: relative;
+    left: 10%;
+    margin-top: 10%;
+   transform: scale(1.4);
+}
+    .targeta{
+        display: flex;
+    }
+    #abrirVentana {
+
+        display: flex;
+      }
+      
+      #cerrarVentana {
+       
+        display: flex;
+      }
+  }
+  
+  
