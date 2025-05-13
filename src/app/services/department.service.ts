@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import departmentsData from '../assets/data/departments.json';
+import departmentsData from '../departments.json';
 
 interface Department {
   id: string;

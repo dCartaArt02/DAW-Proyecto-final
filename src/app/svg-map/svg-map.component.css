@@ -21,24 +21,10 @@
       fill: #EDA398;
     }
 
-    @font-face {
-    font-family: "neovibes";
-    src: url('../assets/fonts/neovibes.otf') format('opentype');
-}
-@font-face {
-    font-family: UbuntuMono;
-    src: url('../assets/fonts/UbuntuMono-Regular.ttf');
-}
-@font-face {
-    font-family: UbuntuMonoB;
-    src: url('../assets/fonts/UbuntuMono-Bold.ttf');
-}
 
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .map-container{
     background-color: #F9F6EF;
-    font-family: alpha;
     color: #282828;
 }

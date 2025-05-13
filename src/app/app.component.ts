@@ -3,31 +3,35 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SvgMapComponent } from './svg-map/svg-map.component';
-import { DraggableWindowComponent } from './draggable-window/draggable-window.component';
-
+import { CuscatlanComponent } from './departamentos/cuscatlan/cuscatlan.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, SvgMapComponent, DraggableWindowComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, SvgMapComponent, CuscatlanComponent],
   styleUrls: ['./app.component.css'],
   template: `
 
     <app-navbar></app-navbar>
+    <div class="container">
+    </div>
     <div class="content-container">
       <router-outlet></router-outlet>
-      <!-- Mostrar el mapa por defecto -->
-      <app-svg-map *ngIf="!isDepartmentRoute()"></app-svg-map>
+      <app-svg-map *ngIf="router.url === '/'"></app-svg-map>
+      
     </div>
+    
     <footer class="footer bg-dark text-white text-center py-3">
       <p>&#169; SALAMALECOS 2025</p>
     </footer>
   `,
 })
 export class AppComponent {
-  
+  constructor(public router: Router) {}
   isDepartmentRoute(): boolean {
    
     return window.location.pathname.includes('/departamento/');
     
   }
+  
 }
