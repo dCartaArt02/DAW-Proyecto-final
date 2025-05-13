@@ -10,7 +10,12 @@ import { LalibertadComponent } from './app/departamentos/lalibertad/lalibertad.c
 import { LapazComponent } from './app/departamentos/lapaz/lapaz.component';
 import { MorazanComponent } from './app/departamentos/morazan/morazan.component';
 import { SanmiguelComponent } from './app/departamentos/sanmiguel/sanmiguel.component';
-  
+import { SansalvadorComponent } from './app/departamentos/sansalvador/sansalvador.component';
+import { SantaanaComponent } from './app/departamentos/santaana/santaana.component';
+import { SanvicenteComponent } from './app/departamentos/sanvicente/sanvicente.component';
+import { SonsonateComponent } from './app/departamentos/sonsonate/sonsonate.component';
+import { UnionComponent } from './app/departamentos/union/union.component';
+import { UsulutanComponent } from './app/departamentos/usulutan/usulutan.component';
 const routes: Routes = [
     {path: 'cus', component: CuscatlanComponent},
     {path: 'caba', component: CabanasComponent},
@@ -20,6 +25,12 @@ const routes: Routes = [
     {path: 'lap', component: LapazComponent},
     {path: 'mor', component: MorazanComponent},
     {path: 'san', component: SanmiguelComponent},
+    {path: 'sas', component: SansalvadorComponent},
+    {path: 'sat', component: SantaanaComponent},
+    {path: 'sav', component: SanvicenteComponent},
+    {path: 'son', component: SonsonateComponent},
+    {path: 'uni', component: UnionComponent},
+    {path: 'usu', component: UsulutanComponent},
   ];
 
   
