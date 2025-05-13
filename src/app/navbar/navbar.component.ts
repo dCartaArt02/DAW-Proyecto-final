@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -82,4 +83,9 @@ import { RouterModule } from '@angular/router';
   `]
 
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  constructor(public router: Router){}
+  navigateTo(departamentos: string) {
+    this.router.navigate([`/${departamentos}`]);
+  }
+}
