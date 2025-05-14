@@ -191,7 +191,7 @@ export class SvgMapComponent implements AfterViewInit {
   }
 
   // Manejar mouseleave del documento
-  @HostListener('document:mouseleave')
+  @HostListener('document:visibilitychange')
   onDocumentMouseLeave() {
     this.resetWindow();
   }

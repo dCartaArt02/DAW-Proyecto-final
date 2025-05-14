@@ -91,10 +91,11 @@
   </div>
 
   <h4 class="tituloI text-center mt-5">Consultas anteriores</h4>
-  <ul class="list-group mx-auto mt-3" style="max-width: 600px;">
+  <ul class="list-group mx-auto mt-3" style="max-width: 600px;" id="contactList">
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
       *ngFor="let entry of entries; let i = index"
+      [attr.data-index]="i"
     >
       <div>
         <strong>{{ entry.nombre }} {{ entry.apellidos }}</strong>
@@ -106,7 +107,7 @@
         <button class="btn btn-outline-secondary" (click)="onEdit(i)">
           ✏️
         </button>
-        <button class="btn btn-outline-danger" (click)="onDelete(i)">
+        <button class="btn btn-outline-danger" data-action="delete">
           🗑️
         </button>
       </div>

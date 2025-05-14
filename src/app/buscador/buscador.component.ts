@@ -1,8 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { signal } from '@angular/core';
+
+declare const $: any;
 
 interface Departamento {
   id: string;
@@ -31,7 +34,7 @@ interface Departamento {
     ])
   ]
 })
-export class BuscadorComponent {
+export class BuscadorComponent implements AfterViewInit {
   searchTerm = '';
   isExpanded = signal(false);
   showResults = signal(false);
@@ -168,5 +171,10 @@ export class BuscadorComponent {
       depto.codigo.toLowerCase().includes(term)
     );
     this.showResults.set(true);
+  }
+
+   ngAfterViewInit() {
+    // Inicia el input oculto para tu buscador
+    $('#searchInput').hide();
   }
 }

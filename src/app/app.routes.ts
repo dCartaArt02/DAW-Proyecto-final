@@ -14,6 +14,8 @@ import { SonsonateComponent } from './departamentos/sonsonate/sonsonate.componen
 import { UnionComponent } from './departamentos/union/union.component';
 import { UsulutanComponent } from './departamentos/usulutan/usulutan.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { DesarrolladoresComponent } from './desarrollador/desarrollador.component';
+
 
 export const routes: Routes = [
     {path: 'departamento/ahuachapan', component: AhuchapanComponent},
@@ -31,5 +33,7 @@ export const routes: Routes = [
     {path: 'departamento/la-union', component: UnionComponent},
     {path: 'departamento/usulutan', component: UsulutanComponent},
     {path: 'contacto', component: ContactoComponent},
+    {path: 'creadores', component: DesarrolladoresComponent},
+
 ];
 

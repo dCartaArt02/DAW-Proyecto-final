@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+import { AfterViewInit, ElementRef } from '@angular/core';
+declare const $: any;
+
 interface ContactEntry {
   nombre: string;
   apellidos: string;
@@ -15,10 +18,12 @@ interface ContactEntry {
   standalone: true,
   imports: [FormsModule, CommonModule],
   selector: 'app-contacto',
-  templateUrl: './contacto.component.html',
+  templateUrl: 'contacto.component.html',
   styleUrls: ['./contacto.component.css'],
 })
-export class ContactoComponent implements OnInit {
+
+
+export class ContactoComponent implements AfterViewInit {
   readonly STORAGE_KEY = 'contactEntries';
   entries: ContactEntry[] = [];
   model: ContactEntry = {
@@ -86,4 +91,36 @@ export class ContactoComponent implements OnInit {
     this.editIndex = null;
     this.error = null;
   }
+
+  constructor(private el: ElementRef) {}
+
+  ngAfterViewInit(): void {
+    
+    const $list = $(this.el.nativeElement).find('#contactList');
+    
+
+    $list.on('click', 'button[data-action="delete"]', (e: JQuery.ClickEvent) => {
+  const $li = $(e.currentTarget).closest('li');
+      const idx = +$li.data('index');
+      this.onDelete(idx);
+
+      $li.slideUp(200, () => $li.remove());
+    });
+
+
+    const $form = $(this.el.nativeElement).find('#contactForm');
+
+    $form.on('submit', (e: JQuery.Event) =>{
+      e.preventDefault();
+      const previousLength = this.entries.length;
+      this.onSubmit();
+
+      if (this.entries.length > previousLength) {
+
+        const $newLi = $list.children('li').last().hide();
+        $newLi.fadeIn(300);
+      }
+    });
+  }
+
 }

@@ -16,6 +16,7 @@ import { SanvicenteComponent } from './app/departamentos/sanvicente/sanvicente.c
 import { SonsonateComponent } from './app/departamentos/sonsonate/sonsonate.component';
 import { UnionComponent } from './app/departamentos/union/union.component';
 import { UsulutanComponent } from './app/departamentos/usulutan/usulutan.component';
+import { DesarrolladoresComponent } from './app/desarrollador/desarrollador.component';
 
 const routes: Routes = [
     {path: 'cus', component: CuscatlanComponent},
