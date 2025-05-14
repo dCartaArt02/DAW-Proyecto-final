@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
+import { BuscadorComponent } from '../buscador/buscador.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, BuscadorComponent],
   template: `
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -60,6 +61,9 @@ import { Router } from '@angular/router';
                   </ul>
                 </li>
               </ul>
+            </li>
+            <li class="nav-item">
+              <app-buscador></app-buscador>
             </li>
           </ul>
         </div>

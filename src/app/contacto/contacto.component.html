@@ -1,0 +1,121 @@
+<div class="container mt-4">
+  <h3 class="tituloI text-center mb-4">Contáctanos</h3>
+  <div class="carta mx-auto p-4">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Primer Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          class="form-control"
+          required
+          [(ngModel)]="model.nombre"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="apellidos" class="form-label">Apellidos</label>
+        <input
+          type="text"
+          id="apellidos"
+          name="apellidos"
+          class="form-control"
+          required
+          [(ngModel)]="model.apellidos"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="direccion" class="form-label">Dirección</label>
+        <input
+          type="text"
+          id="direccion"
+          name="direccion"
+          class="form-control"
+          [(ngModel)]="model.direccion"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control"
+          required
+          [(ngModel)]="model.email"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          class="form-control"
+          [(ngModel)]="model.telefono"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Tu opinión</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          class="form-control"
+          required
+          [(ngModel)]="model.mensaje"
+        ></textarea>
+      </div>
+
+      <div *ngIf="error" class="alert alert-danger">
+        {{ error }}
+      </div>
+
+      <button type="submit" class="btn btn-primary me-2">
+        {{ editIndex !== null ? 'Actualizar' : 'Enviar' }}
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        *ngIf="editIndex !== null"
+        (click)="cancelEdit()"
+      >
+        Cancelar
+      </button>
+    </form>
+  </div>
+
+  <h4 class="tituloI text-center mt-5">Consultas anteriores</h4>
+  <ul class="list-group mx-auto mt-3" style="max-width: 600px;">
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+      *ngFor="let entry of entries; let i = index"
+    >
+      <div>
+        <strong>{{ entry.nombre }} {{ entry.apellidos }}</strong>
+        <br />
+        {{ entry.email }} · {{ entry.telefono }}
+        <p class="mb-0">{{ entry.mensaje }}</p>
+      </div>
+      <div class="btn-group btn-group-sm">
+        <button class="btn btn-outline-secondary" (click)="onEdit(i)">
+          ✏️
+        </button>
+        <button class="btn btn-outline-danger" (click)="onDelete(i)">
+          🗑️
+        </button>
+      </div>
+    </li>
+    <li
+      *ngIf="entries.length === 0"
+      class="list-group-item text-center text-muted"
+    >
+      No hay consultas aún.
+    </li>
+  </ul>
+</div>

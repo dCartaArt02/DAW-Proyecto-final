@@ -1,0 +1,42 @@
+<div class="search-container">
+  <div class="search-header">
+    <button (click)="toggleSearch()" class="toggle-btn">
+      @if (isExpanded()) {
+        <span>✕</span>
+      } @else {
+        <span>🔍 Buscar departamentos</span>
+      }
+    </button>
+  </div>
+
+  @if (isExpanded()) {
+    <div @expandCollapse class="search-box">
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        (input)="filterDepartamentos()"
+        placeholder="Escribe para buscar..."
+        class="search-input"
+      >
+    </div>
+  }
+
+  @if (showResults() && isExpanded()) {
+    <div @expandCollapse class="results-container">
+      <ul class="results-list">
+        @for (depto of filteredDepartamentos; track depto.id) {
+          <li>
+            <a [routerLink]="depto.ruta" (click)="toggleSearch()">
+              <strong>{{ depto.name }}</strong> ({{ depto.codigo }})
+              @if (depto.capital) {
+                <span class="capital">- {{ depto.capital }}</span>
+              }
+            </a>
+          </li>
+        } @empty {
+          <li class="no-results">No se encontraron departamentos</li>
+        }
+      </ul>
+    </div>
+  }
+</div>

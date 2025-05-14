@@ -13,6 +13,7 @@ import { SanvicenteComponent } from './departamentos/sanvicente/sanvicente.compo
 import { SonsonateComponent } from './departamentos/sonsonate/sonsonate.component';
 import { UnionComponent } from './departamentos/union/union.component';
 import { UsulutanComponent } from './departamentos/usulutan/usulutan.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 export const routes: Routes = [
     {path: 'departamento/ahuachapan', component: AhuchapanComponent},
@@ -29,5 +30,6 @@ export const routes: Routes = [
     {path: 'departamento/sonsonate', component: SonsonateComponent},
     {path: 'departamento/la-union', component: UnionComponent},
     {path: 'departamento/usulutan', component: UsulutanComponent},
+    {path: 'contacto', component: ContactoComponent},
 ];
 
